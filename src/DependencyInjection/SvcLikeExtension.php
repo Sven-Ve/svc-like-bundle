@@ -1,6 +1,6 @@
 <?php
 
-namespace Svc\VideoBundle\DependencyInjection;
+namespace Svc\LikeBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

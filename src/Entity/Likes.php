@@ -10,7 +10,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 
 /**
- * @ORM\Entity(repositoryClass=LikeRepository::class)
+ * @ORM\Entity(repositoryClass=LikesRepository::class)
  * @UniqueEntity(fields={"source", "sourceID", "userID"},
  *    errorPath="sourceID",
  *    message="You cannot like twice for the same object."

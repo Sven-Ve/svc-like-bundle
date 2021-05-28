@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Svc\\VideoBundle\\": "src/"
+      "Svc\\LikeBundle\\": "src/"
     }
   },
   "autoload-dev": {

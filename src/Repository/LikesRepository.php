@@ -2,9 +2,9 @@
 
 namespace Svc\LikeBundle\Repository;
 
-use Svc\LikeBundle\Entity\Likes;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Svc\LikeBundle\Entity\Likes;
 
 /**
  * @method Like|null find($id, $lockMode = null, $lockVersion = null)
