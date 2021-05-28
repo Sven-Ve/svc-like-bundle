@@ -9,3 +9,4 @@ Versions
 
 
 * Version 0.0.1: first test version
+* Version 0.0.2: testing...
