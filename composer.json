@@ -4,10 +4,10 @@
   "type": "symfony-bundle",
   "license": "MIT",
   "authors": [
-      {
-          "name": "Sven Vetter",
-          "email": "git.09o@svenvetter.com"
-      }
+    {
+      "name": "Sven Vetter",
+      "email": "git.09o@svenvetter.com"
+    }
   ],
   "require": {
     "php": "^7.3.0 | ^8.0.0",
@@ -16,6 +16,9 @@
     "doctrine/orm": "^2.8",
     "symfony/validator": "^5",
     "symfony/security-bundle": "^5"
+  },
+  "suggest": {
+    "svc/video-bundle": "Display likes in the video bundle"
   },
   "autoload": {
     "psr-4": {
