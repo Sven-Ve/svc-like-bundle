@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-$version = "1.1.0";
-$message = "first public version";
+$version = "1.1.1";
+$message = "added link to svc-video-bundle";
 
 file_put_contents("CHANGELOG.md", "\n\n## Version " . $version, FILE_APPEND);
 file_put_contents("CHANGELOG.md", "\n*" . date("r") . "*", FILE_APPEND);
