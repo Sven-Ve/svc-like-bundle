@@ -1,6 +1,6 @@
 {
   "name": "svc/like-bundle",
-  "description": "Private package to handle likes",
+  "description": "Small helper bundle for SvcVideoBundle. Also useful for other applications. Stores the clicks on a like button (for logged in users) in a table as well as a cookie (for anonymous users).",
   "type": "symfony-bundle",
   "license": "MIT",
   "authors": [
@@ -15,7 +15,7 @@
     "doctrine/doctrine-bundle": "^2.2",
     "doctrine/orm": "^2.8",
     "symfony/validator": "^5",
-    "symfony/security-bundle": "5.*"
+    "symfony/security-bundle": "^5"
   },
   "autoload": {
     "psr-4": {

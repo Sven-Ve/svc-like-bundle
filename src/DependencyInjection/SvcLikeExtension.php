@@ -11,9 +11,6 @@ class SvcLikeExtension extends Extension
 {
   public function load(array $configs, ContainerBuilder $container)
   {
-    // $rootPath = $container->getParameter("kernel.project_dir");
-    // $this->createConfigIfNotExists($rootPath);
-
     $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
     $loader->load('services.xml');
 
@@ -21,12 +18,7 @@ class SvcLikeExtension extends Extension
     $config = $this->processConfiguration($configuration, $configs);
 
     // set arguments for __construct in services
-//    $definition = $container->getDefinition('svc_profile.controller.change-pw');
-//    $definition->setArgument(1, $config['enableCaptcha']);
+    //    $definition = $container->getDefinition('svc_profile.controller.change-pw');
+    //    $definition->setArgument(1, $config['enableCaptcha']);
   }
-
-  private function createConfigIfNotExists($rootPath)
-  {
-  }
-
 }
