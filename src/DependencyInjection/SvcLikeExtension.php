@@ -11,14 +11,7 @@ class SvcLikeExtension extends Extension
 {
   public function load(array $configs, ContainerBuilder $container)
   {
-    $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+    $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../../Resources/config'));
     $loader->load('services.xml');
-
-    $configuration = $this->getConfiguration($configs, $container);
-    $config = $this->processConfiguration($configuration, $configs);
-
-    // set arguments for __construct in services
-    //    $definition = $container->getDefinition('svc_profile.controller.change-pw');
-    //    $definition->setArgument(1, $config['enableCaptcha']);
   }
 }
