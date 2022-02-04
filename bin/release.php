@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-$version = "1.2.0";
-$message = "install stimulus controller via ux-webpack-logic";
+$version = "2.0.0";
+$message = "update to stimulus 3.0";
 
 file_put_contents("CHANGELOG.md", "\n\n## Version " . $version, FILE_APPEND);
 file_put_contents("CHANGELOG.md", "\n*" . date("r") . "*", FILE_APPEND);

@@ -15,3 +15,8 @@
 ## Version 1.2.0
 *Sun, 08 Aug 2021 17:17:06 +0000*
 - install stimulus controller via ux-webpack-logic
+
+
+## Version 2.0.0
+*Fri, 04 Feb 2022 20:45:13 +0000*
+- update to stimulus 3.0
