@@ -20,3 +20,8 @@
 ## Version 2.0.0
 *Fri, 04 Feb 2022 20:45:13 +0000*
 - update to stimulus 3.0
+
+
+## Version 2.1.0
+*Sun, 24 Apr 2022 13:02:36 +0000*
+- update to symfony 5.4/6.0, added phpstan

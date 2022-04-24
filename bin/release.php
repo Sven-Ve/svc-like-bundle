@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-$version = "2.0.0";
-$message = "update to stimulus 3.0";
+$version = "2.1.0";
+$message = "update to symfony 5.4/6.0, added phpstan";
 
 file_put_contents("CHANGELOG.md", "\n\n## Version " . $version, FILE_APPEND);
 file_put_contents("CHANGELOG.md", "\n*" . date("r") . "*", FILE_APPEND);

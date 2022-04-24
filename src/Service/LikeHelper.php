@@ -44,7 +44,6 @@ class LikeHelper
     } else {
       return array_key_exists($this->createCookieName($source, $sourceID), $_COOKIE);
     }
-    return false;
   }
 
   /**
