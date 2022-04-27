@@ -4,6 +4,13 @@
 $version = "2.1.0";
 $message = "update to symfony 5.4/6.0, added phpstan";
 
+echo("Running phpstan:\n");
+system("composer run-script phpstan", $res);
+if ($res>0) {
+  echo("\nError during execution phpstan. Releasing cannceled.\n");
+  return 1;
+}
+
 file_put_contents("CHANGELOG.md", "\n\n## Version " . $version, FILE_APPEND);
 file_put_contents("CHANGELOG.md", "\n*" . date("r") . "*", FILE_APPEND);
 file_put_contents("CHANGELOG.md", "\n- " . $message . "\n", FILE_APPEND);
