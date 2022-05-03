@@ -25,3 +25,8 @@
 ## Version 2.1.0
 *Sun, 24 Apr 2022 13:02:36 +0000*
 - update to symfony 5.4/6.0, added phpstan
+
+
+## Version 3.0.0
+*Tue, 03 May 2022 09:23:53 +0000*
+- runs only with symfony 5.4/6 and php 8

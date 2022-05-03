@@ -16,17 +16,10 @@ class LikeHelper
 
   public const SOURCE_VIDEO = 1;
 
-  public const LIKE_TYPE_LIKE = 1;  // for the future, mabe we have more than one like type (dislike??)
+  public const LIKE_TYPE_LIKE = 1; // for the future, mabe we have more than one like type (dislike??)
 
-  private $likesRep;
-  private $security;
-  private $entityManager;
-
-  public function __construct(LikesRepository $likesRep, Security $security, EntityManagerInterface $entityManager)
+  public function __construct(private LikesRepository $likesRep, private Security $security, private EntityManagerInterface $entityManager)
   {
-    $this->likesRep = $likesRep;
-    $this->security = $security;
-    $this->entityManager = $entityManager;
   }
 
   /**
@@ -40,6 +33,7 @@ class LikeHelper
   public function isLiked(int $source, int $sourceID, ?int $likeType = LikeHelper::LIKE_TYPE_LIKE): bool
   {
     if ($user = $this->security->getUser()) {
+      /** @phpstan-ignore-next-line */
       return $this->likesRep->findOneBy(['source' => $source, 'sourceID' => $sourceID, 'userID' => $user->getId()]) ? true : false;
     } else {
       return array_key_exists($this->createCookieName($source, $sourceID), $_COOKIE);
@@ -52,7 +46,6 @@ class LikeHelper
    * @param integer $source type of source, one of the constants LikeHelper::SOURE*
    * @param integer $sourceID internal id within the source
    * @param integer|null $likeType type of like (future...)
-   * @param string|null $cookieName
    * @return boolean true: successfull, false: failed, maybe like exists
    */
   public function addLike(int $source, int $sourceID, ?int $likeType = LikeHelper::LIKE_TYPE_LIKE, ?string &$cookieName = null): bool
@@ -61,11 +54,11 @@ class LikeHelper
       $like = new Likes();
       $like->setSource($source);
       $like->setSourceID($sourceID);
-      $like->setUserID($user->getId());
+      $like->setUserID($user->getId()); /** @phpstan-ignore-line */
       $this->entityManager->persist($like);
       try {
         $this->entityManager->flush();
-      } catch (Exception $e) {
+      } catch (Exception) {
         return false;
       }
     } else {
