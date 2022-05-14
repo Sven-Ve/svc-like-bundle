@@ -30,3 +30,8 @@
 ## Version 3.0.0
 *Tue, 03 May 2022 09:23:53 +0000*
 - runs only with symfony 5.4/6 and php 8
+
+
+## Version 3.0.1
+*Sat, 14 May 2022 16:33:13 +0000*
+- php attribute type added

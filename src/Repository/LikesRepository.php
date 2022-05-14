@@ -14,8 +14,8 @@ use Svc\LikeBundle\Entity\Likes;
  */
 class LikesRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
-    {
-        parent::__construct($registry, Likes::class);
-    }
+  public function __construct(ManagerRegistry $registry)
+  {
+    parent::__construct($registry, Likes::class);
+  }
 }
