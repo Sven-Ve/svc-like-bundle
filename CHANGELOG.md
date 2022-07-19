@@ -35,3 +35,8 @@
 ## Version 3.0.1
 *Sat, 14 May 2022 16:33:13 +0000*
 - php attribute type added
+
+
+## Version 4.0.0
+*Tue, 19 Jul 2022 18:59:50 +0000*
+- build with Symfony 6.1 bundle features, runs only with symfony 6.1

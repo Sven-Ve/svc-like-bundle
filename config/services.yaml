@@ -1,0 +1,8 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Svc\LikeBundle\Service\LikeHelper:
+  Svc\LikeBundle\Repository\LikesRepository:
