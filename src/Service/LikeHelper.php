@@ -6,7 +6,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Exception;
 use Svc\LikeBundle\Entity\Likes;
 use Svc\LikeBundle\Repository\LikesRepository;
-use Symfony\Component\Security\Core\Security;
+use Symfony\Bundle\SecurityBundle\Security;
 
 /**
  * helper function for links.
