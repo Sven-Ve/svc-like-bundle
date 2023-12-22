@@ -50,3 +50,8 @@
 ## Version 4.1.0
 *Thu, 01 Dec 2022 20:38:51 +0000*
 - fix security deprecation for symfony 6.2
+
+
+## Version 5.0.0
+*Fri, 22 Dec 2023 20:52:00 +0000*
+- ready for symfony 6.4 and 7
