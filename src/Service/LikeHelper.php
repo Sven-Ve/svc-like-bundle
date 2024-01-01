@@ -3,7 +3,6 @@
 namespace Svc\LikeBundle\Service;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Exception;
 use Svc\LikeBundle\Entity\Likes;
 use Svc\LikeBundle\Repository\LikesRepository;
 use Symfony\Bundle\SecurityBundle\Security;
@@ -49,7 +48,7 @@ class LikeHelper
    *
    * @return bool true: successfull, false: failed, maybe like exists
    */
-  public function addLike(int $source, int $sourceID, ?int $likeType = LikeHelper::LIKE_TYPE_LIKE, ?string &$cookieName = null): bool
+  public function addLike(int $source, int $sourceID, ?int $likeType = LikeHelper::LIKE_TYPE_LIKE, string &$cookieName = null): bool
   {
     if ($user = $this->security->getUser()) {
       $like = new Likes();
@@ -59,7 +58,7 @@ class LikeHelper
       $this->entityManager->persist($like);
       try {
         $this->entityManager->flush();
-      } catch (Exception) {
+      } catch (\Exception) {
         return false;
       }
     } else {

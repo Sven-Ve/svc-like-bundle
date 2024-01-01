@@ -2,13 +2,16 @@
   "name": "@svc/like-bundle",
   "description": "Small helper bundle for SvcVideoBundle. Also useful for other applications. Stores the clicks on a like button (for logged in users) in a table as well as a cookie (for anonymous users).",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "symfony": {
       "controllers": {
           "like": {
               "main": "src/like.js",
               "fetch": "lazy",
-              "enabled": true
+              "enabled": true,
+              "autoimport": {
+                "@svc/like-bundle/styles/layout/_likes.css": true
+              }
           }
       }
   }
