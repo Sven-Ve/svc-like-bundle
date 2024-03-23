@@ -48,7 +48,7 @@ class LikeHelper
    *
    * @return bool true: successfull, false: failed, maybe like exists
    */
-  public function addLike(int $source, int $sourceID, ?int $likeType = LikeHelper::LIKE_TYPE_LIKE, string &$cookieName = null): bool
+  public function addLike(int $source, int $sourceID, ?int $likeType = LikeHelper::LIKE_TYPE_LIKE, ?string &$cookieName = null): bool
   {
     if ($user = $this->security->getUser()) {
       $like = new Likes();

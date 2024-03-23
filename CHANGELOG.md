@@ -60,3 +60,8 @@
 ## Version 5.1.0
 *Mon, 01 Jan 2024 19:49:59 +0000*
 - ready for assetmapper
+
+
+## Version 5.2.0
+*Sat, 23 Mar 2024 20:13:18 +0000*
+- runs with doctrine/orm ^3 too
